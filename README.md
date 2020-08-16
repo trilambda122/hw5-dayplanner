@@ -27,13 +27,13 @@ SITE can be found here [DAYPLANNER](https://trilambda122.github.io/hw5-dayplanne
 - [X] import moment.js library
 - [X] create main container
 - [X] Create row with 3 column grid layout [time-display]-[event-display]-[save-display]
-  - [ ] assign custimer classes to each column 
-- [] label time slots
-- [ ] label with save icons for save button 
+  - [X] assign custimer classes to each column 
+- [X] label time slots
+- [X] label with save icons for save button 
 
 **Javascript**
 - [ ] Create global VARs and element targets
-  - [ ] Current moment object 
+  - [X] Current moment object 
   - [ ] Check for local storage or create new local storage is none exists. 
     - [ ] data [timeblock,eventtext]
   - [ ] assign vars to customer class targets [time-display]-[event-display]-[save-display]
