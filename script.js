@@ -3,8 +3,8 @@ $(document).ready(function() {
 
     // get the current time object and format strings from it
     var currentTimeObj = moment();
-    var dayStr = currentTimeObj.format('dddd');
-    var dateStr = currentTimeObj.format("MMMM D,YYYY");
+    var dayStr = currentTimeObj.format('dddd'); // could have probably just passed the object and done the string formating in the fucntion 
+    var dateStr = currentTimeObj.format("MMMM D,YYYY"); // could have probably just passed the object and done the string formating in the fucntion
     displayCurrentDate(dayStr, dateStr);
 
     // setup the local storage 
@@ -12,7 +12,7 @@ $(document).ready(function() {
     console.log("at the START: " + eventStorage)
     var eventObj = "";
 
-    // create an array of the hours for the workday
+    // create an array of the hours for the workday and then a for loop that will add strings for each hour to the array.
     var hours = [];
 
     for (let hour = 9; hour <= 20; hour++) {
@@ -22,7 +22,7 @@ $(document).ready(function() {
 
     // loop through the array and create html rows for each hour block
     hours.forEach(function(item) {
-        // console.log(item);
+
         var blockTime = moment(item, 'h:mm a');
         idTag = item.replace(/:/, "");
 
@@ -43,29 +43,32 @@ $(document).ready(function() {
             "</div>";
         // append the row to the main container.
         $(codeBlock).appendTo('#main-container');
-        // change the color of the block based on where it is in the timeline. 
+        // call function to change the color of the block based on where it is in the timeline. 
         setTimeBlockColor(blockTime, idTag);
 
     });
 
-    // $(".event-class").addClass("bg-danger text-white");
+
 
     //  add event listeners 
+    // event listner for clicking in where the events are listed. not sure i needed this one given there is an input field element. But its here for future use.
     $('.event-class').on('click', function() {
         event.stopPropagation();
         console.log("Event CLICKED: ");
     })
 
+    // event listener for the save icon
     $('.save-class').on('click', function() {
         event.stopPropagation();
         console.log("SAVE CLICKED: ");
-        // get the id attribute and do some string manipulation
+        // get the id attribute and do some string manipulation so that its in the right format to be a selector in jquery
         var id = $(this).attr('id');
         id = id.replace(/icon/, 'event');
         id = id.replace(/\s/, '');
         id = "#" + id;
         var textInEventBox = $(id).val();
 
+        // create an object to store in local storeage
         var eventObj = {
             eventBlockId: id,
             eventText: textInEventBox
@@ -74,22 +77,20 @@ $(document).ready(function() {
 
     })
 
-    // call the popllate funtion to get items from storage and display to the page
+    // call the popllate funtion to get any existing items from storage and display them to the page
     populateEventsFromStorage(eventStorage);
 
-    // display the current date 
+    // display the current date to the jumbotron on the page
     function displayCurrentDate(day, date) {
         $("<h3 class=\" badge badge-primary m-2 \">" + day + " - " + date + "</h3>").appendTo('#currentDay');
 
     };
 
+    // function to store an event in the local storage 
     function storeEvent(eventObj) {
-        // checkIfEventExists(eventObj, eventStorage);
-        console.log("INSIDE THE STORGE FUNCTION");
 
         // check if the eventStorage array is empty and if so push the event to the array
         if (eventStorage.length < 1 && eventObj.eventText !== "") {
-            console.log("event lenght")
             eventStorage.push(eventObj);
             localStorage.setItem("eventStorage", JSON.stringify(eventStorage));
         }
@@ -114,7 +115,6 @@ $(document).ready(function() {
     function populateEventsFromStorage(eventStorage) {
         eventStorage.forEach(function(item) {
             console.log("EVENT ID :" + item.eventBlockId + " EVENT TEXT: " + item.eventText);
-
             $(item.eventBlockId).val(item.eventText);
         });
 
