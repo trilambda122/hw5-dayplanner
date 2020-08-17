@@ -32,14 +32,15 @@ SITE can be found here [DAYPLANNER](https://trilambda122.github.io/hw5-dayplanne
 - [X] label with save icons for save button 
 
 **Javascript**
-- [ ] Create global VARs and element targets
+- [ ] Create global VARs 
   - [X] Current moment object 
-  - [ ] Check for local storage or create new local storage is none exists. 
-    - [ ] data [timeblock,eventtext]
-  - [ ] assign vars to customer class targets [time-display]-[event-display]-[save-display]
-    - [ ] and assign event listener to [event-display]-[save-display]
-- [ ] Function to display current DAY at the top of the calendar
-- [ ] Function to colorize blocks based on hour. 
-- [ ] Function to save event text to local storage
-  - [ ] need to check if text is empty
+  - [X] Check for local storage or create new local storage is none exists. 
+    - [X] data [timeblock,eventtext]
+  - [X] assign vars to customer class targets [time-display]-[event-display]-[save-display]
+    - [X] and assign event listener to [event-display]-[save-display]
+- [X] Function to display current DAY at the top of the calendar
+- [X] Function to colorize blocks based on hour. 
+- [X] Function to save event text to local storage
+  - [X] need to check if text is empty
+  - [ ] Ability to  change events once placed for the day
 
