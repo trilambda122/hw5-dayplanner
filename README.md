@@ -3,6 +3,9 @@
 SITE can be found here [DAYPLANNER](https://trilambda122.github.io/hw5-dayplanner/)
 ## Requirements
 
+  *screenshot*
+![Awesome Screen Shoot](screen_shot_of_app.png)  
+
 
 - Displays the current day at the top of the calendar
 - Dayplanner showing 9am to 5pm thourly timeblocks
