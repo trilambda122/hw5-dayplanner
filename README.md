@@ -1,10 +1,12 @@
 # hw5-dayplanner
 
 SITE can be found here [DAYPLANNER](https://trilambda122.github.io/hw5-dayplanner/)
-## Requirements
 
   *screenshot*
 ![Awesome Screen Shoot](screen_shot_of_app.png)  
+
+## Requirements
+
 
 
 - Displays the current day at the top of the calendar
@@ -23,7 +25,7 @@ SITE can be found here [DAYPLANNER](https://trilambda122.github.io/hw5-dayplanne
 - 
 ## BUGS
 - can enter empty events into local storage. that will likley cause problems down the line
-- when you change an event the changed event get added to the local storage but the old one does not get deleted. 
+- when you change an event the changed event get added to the local storage but the old one does not get deleted. everything does display correctly however. 
 ## TODO
 
 **HTML / CSS** 
