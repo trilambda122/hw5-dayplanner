@@ -1,10 +1,14 @@
 # hw5-dayplanner
 
-SITE can be found here [DAYPLANNER](https://trilambda122.github.io/hw5-dayplanner/)
+SITE can be found here [DAYPLANNER](https://trilambda122.github.io/hw5-dayplanner/). Created using Jquery and moment.js 
 
-  *screenshot*
+Simple and clean hourly dayplanner app.
+ 
+ *screenshot*
 ![Awesome Screen Shoot](screen_shot_of_app.png)  
 
+>shane@sschilling.com
+---
 ## Requirements
 
 
